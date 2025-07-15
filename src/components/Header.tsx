@@ -4,8 +4,8 @@ const Header = () => {
       <header className="relative z-50 px-6 py-4">
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="text-2xl font-bold">
-            <span className="text-lime-400">DEV</span>
-            <span className="text-white">FOLIO.</span>
+            <span className="text-lime-400">KAUÊ</span>
+            <span className="text-white">GOMES.</span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#about" className="hover:text-lime-400 transition-colors">About</a>
