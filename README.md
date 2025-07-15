@@ -1,69 +1,104 @@
-# React + TypeScript + Vite
+# Protifolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page moderna para portfólio de desenvolvedor, construída com React, TypeScript e Vite. O projeto destaca habilidades, projetos, processos e formas de contato, utilizando as melhores práticas e tecnologias atuais do ecossistema web.
 
-Currently, two official plugins are available:
+## ✨ Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** — Biblioteca para construção de interfaces modernas e reativas.
+- **TypeScript** — Superset do JavaScript que adiciona tipagem estática.
+- **Vite** — Ferramenta de build e desenvolvimento ultrarrápida.
+- **Tailwind CSS** — Framework utilitário para estilização rápida e responsiva.
+- **Lucide React** — Ícones SVG modernos para React.
+- **ESLint** — Linter para manter a qualidade e padronização do código.
 
-## Expanding the ESLint configuration
+## 📁 Estrutura do Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+protifolio/
+├── public/           # Arquivos estáticos
+├── src/
+│   ├── assets/       # Imagens e SVGs
+│   ├── components/   # Componentes React (About, Projects, Skills, etc)
+│   ├── App.tsx       # Composição principal da página
+│   ├── main.tsx      # Ponto de entrada da aplicação
+│   └── App.css       # Estilos globais
+├── package.json      # Dependências e scripts
+├── tailwind.config.js# Configuração do Tailwind
+├── vite.config.ts    # Configuração do Vite
+└── README.md         # Documentação
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧩 Principais Funcionalidades
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Seção Hero**: Apresentação e chamada para ação.
+- **Sobre**: Experiência, áreas de atuação e tecnologias dominadas.
+- **Projetos**: Destaque para projetos inovadores, tecnologias usadas e resultados.
+- **Skills**: Lista de habilidades técnicas com níveis de proficiência.
+- **Processo**: Metodologia de trabalho e ferramentas modernas.
+- **Contato**: Formas de contato e links para redes sociais.
+- **Footer**: Informações finais e créditos.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Como Rodar o Projeto
+
+### Pré-requisitos
+- [Node.js](https://nodejs.org/) (recomendado v18+)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+
+### Passo a Passo
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/protifolio.git
+   cd protifolio
+   ```
+
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+
+3. **Rode o projeto em modo desenvolvimento:**
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+   O Vite irá iniciar o servidor local. Acesse [http://localhost:5173](http://localhost:5173) no navegador.
+
+4. **Build para produção:**
+   ```bash
+   npm run build
+   # ou
+   yarn build
+   ```
+   Os arquivos otimizados ficarão na pasta `dist/`.
+
+5. **Preview do build de produção:**
+   ```bash
+   npm run preview
+   # ou
+   yarn preview
+   ```
+
+### Scripts Disponíveis
+- `dev`: Inicia o servidor de desenvolvimento
+- `build`: Gera o build de produção
+- `preview`: Visualiza o build de produção localmente
+- `lint`: Executa o linter para análise de código
+
+## 🛠️ Customização
+- Edite os componentes em `src/components/` para personalizar seções, textos e estilos.
+- Altere as cores e temas no `tailwind.config.js`.
+- Adicione novos projetos ou skills diretamente nos componentes correspondentes.
+
+## 📚 Referências
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
+
+## 📄 Licença
+Este projeto é open-source e está sob a licença MIT.
